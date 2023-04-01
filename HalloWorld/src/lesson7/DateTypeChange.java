@@ -50,6 +50,5 @@ public class DateTypeChange {
 //		④
 		i3 = Integer.parseInt(s);
 		System.out.println(i3);
-		
 	}
 }
