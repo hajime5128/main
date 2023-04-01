@@ -35,14 +35,20 @@ public class DateTypeChange {
 //		　String型の変数をコンソールに出力して下さい。
 //		④「②」で定義したint型変数に、String型の変数をint型に型変換して代入して下さい。
 //		　int型の変数をコンソールに出力して下さい。
+//		①
 		double d3;
 		d3 = 2 + 6.0;
 		System.out.println(d3);
+//		②
 		int i3;
 		i3 = (int)d3;
 		System.out.println(i3);
+//		③
 		String s;
 		s = String.valueOf(i3);
 		System.out.println(s);
+//		④
+		i3 = Integer.parseInt(s);
+		System.out.println(i3);
 	}
 }
