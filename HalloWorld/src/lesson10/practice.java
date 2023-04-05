@@ -16,7 +16,11 @@ package lesson10;
 public class practice {
 
 	public static void main(String[] args) {
-		for (int i = 1; i <= 20; i = i + 2){
+		int i = 1;
+		for (;  i <= 21 ; i = i + 2){
+			if(i == 1) {
+				continue;
+			}
 			  // 繰り返しの中で実行される処理
 			  System.out.println(i);
 			}
