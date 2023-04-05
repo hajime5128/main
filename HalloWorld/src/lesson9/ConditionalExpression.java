@@ -26,7 +26,7 @@ public class ConditionalExpression {
 //		もし score が 60点以上、80点以下なら「〇〇さんは□□点です。よくできました。」、
 //		もし score が 80点以上なら「〇〇さんは□□点です。たいへんよくできました。」とコンソールに出力して下さい。
 		String name;
-		name = "槙野";
+		name = "槇野";
 		Random random = new Random();
 		 int randomNum = random.nextInt(100) + 1;
 		 if(randomNum < 40) {
@@ -58,7 +58,7 @@ public class ConditionalExpression {
 		}
 //		３公演ざんし書き直し　再勉強
 //		④三項演算子使っての出力完了
-		System.out.println(isTired == 0 ? study+"続けます。" : "私は疲れています。");
+		System.out.println(isTired == 0 ? study+"続けます。" : "");
 		}
 	}
 
