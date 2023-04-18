@@ -22,8 +22,8 @@ public class Curriculum_New_1_18{
 		}
 	}
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
-	private static void tomotinn(double d) {
-		System.out.println(d+d);
+	private static void tomotinn(int i,int t) {
+		System.out.println(i+t);
 	}
 	// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 	// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
@@ -32,6 +32,7 @@ public class Curriculum_New_1_18{
 		Random random = new Random();
 		int[] randomNum = new int[num];
 		// 1-100出す処理
+		System.out.println("Q5");
 		for(int i = 0;i < num; i++) {
 			randomNum[i] = random.nextInt(100) + 1;
 			System.out.println(randomNum[i]);
@@ -44,23 +45,27 @@ public class Curriculum_New_1_18{
 	// ※小数点以下も表示されるようにしてください。
 	public static double average(int [] ave) {
 		// 受け取った配列の器を作る
-			// randomNum配列の中の要素を全部足す
-			int sum = 0;
-			for (int d : ave) sum += d; 
-			// 合計を配列ので割、平均を求める
-	        double average = sum / ave.length;	        
-	        System.out.println(average);
-			return average;   
+		// randomNum配列の中の要素を全部足す
+		int sum = 0;
+		for (int d : ave) { 
+			sum += d; 
+		}
+		// 合計を配列ので割、平均を求める
+		double average = (sum / ave.length);
+		System.out.println("Q6");
+		System.out.println(average);
+		return average;
+		
 	}
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
-	public static void hanntei(double aveNum) {
+	public static boolean hanntei(double aveNum) {
 		if(aveNum >=50) {
-			System.out.println("true");
+			return true;
 		}else {
-			System.out.println("false");
+			return false;
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		// 作成したメソッドをここで呼び出してください
 		// Q1
@@ -75,16 +80,11 @@ public class Curriculum_New_1_18{
 		makkiy (mak);
 		// Q4
 		System.out.println("Q4");
-		tomotinn(9.58);
+		tomotinn(10,11);
 		// Q5
-		System.out.println("Q5");
-		random(3);
 		// Q6
-		System.out.println("Q6");
-		// メゾットが引数になる
-		average(random(3));
 		// Q7
 		System.out.println("Q7");
-		hanntei(average(random(3)));
+		System.out.println(hanntei(average(random(3))));
 	}
 }
