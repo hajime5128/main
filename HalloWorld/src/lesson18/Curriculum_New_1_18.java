@@ -81,9 +81,7 @@ public class Curriculum_New_1_18{
 		// Q4
 		System.out.println("Q4");
 		tomotinn(10,11);
-		// Q5
-		// Q6
-		// Q7
+		// Q5,Q6,Q7
 		System.out.println("Q7");
 		System.out.println(hanntei(average(random(3))));
 	}
