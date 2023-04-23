@@ -25,11 +25,12 @@
  */
 package lesson22_main;
 
+// packageをimport
 import lesson22_1.Sushi;
 public class Sushi_main {
 	public static void main(String[] args) {
 		Sushi food = new Sushi("寿司","日本","和食");
-		// メソッドについて調べる
+		// メソッドの呼び出し
 		food.print();
 		food.time();
 	}
