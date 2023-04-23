@@ -20,24 +20,34 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Sushi {
-	// 型定義
-	String sushi;
+	// 型定義 国　食べ物　ジャンル
+	String food;
+	String country;
+	String genre;
 	Calendar cl;
 	// メゾット作成
-	public static void japan() {
-		System.out.println("こんにちは！ここは日本です！");
+
+	// 代入
+	//  
+	public Sushi(String food, String country,String genre) {
+		this.food = food;
+		this.country = country;
+		this.genre = genre;
+		//	System.out.println("この"+food+"はうまい");
+		//	System.out.println(+"は和食です");
 	}
-	//代入
-	public Sushi(String food) {
-		this.sushi = food;
-		System.out.println("この"+sushi+"はうまい");
-		System.out.println(sushi+"は和食です");
+	
+	public void print() {
+		System.out.println("こんにちは！ここは" + country + "です！");
+		System.out.println("この" + food + "はうまい");
+		System.out.println(food + "は" + genre + "です");
 	}
-	public Sushi() {
+	
+	public void time() {
 		//Calendarクラスのオブジェクトを生成する
 		this.cl = Calendar.getInstance();
 		//SimpleDateFormatクラスでフォーマットパターンを設定する
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		System.out.println(sdf.format(cl.getTime()));
+		System.out.println("今の現在日時は" + sdf.format(cl.getTime()) + "です");
 	}
 }
