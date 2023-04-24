@@ -11,13 +11,14 @@
 package lesson23_1;
 
 public class AnimalInfo{
-	// 変数宣言
-	private String animal = "ライオン";
-	private double lenght = 2.1;
-	private int speed = 80;
+	// フィールド変数宣言
+	private String animal;
+	private double lenght;
+	private int speed;
 
 	// getAnimalメゾット getter setter
 	public String getAnimal() {
+		// フィールド変数に返す
 		return animal;
 	}
 
@@ -52,5 +53,4 @@ public class AnimalInfo{
 		this.speed = speed;
 		System.out.println("速度：" + speed + "km/h");
 	}
-
 }
