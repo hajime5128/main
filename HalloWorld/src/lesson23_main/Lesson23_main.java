@@ -13,7 +13,12 @@ package lesson23_main;
 import lesson23_1.AnimalInfo;
 public class Lesson23_main{
 	public static void main (String[] args) {
-		AnimalInfo animal = new AnimalInfo("ライオン",2.2,80);
-		animal.print();
+		AnimalInfo animal = new AnimalInfo();
+		animal.getAnimal();
+		animal.setAnimal(animal.getAnimal());
+		animal.getLenght();
+		animal.setLenght(animal.getLenght());
+		animal.getSpeed();
+		animal.setSpeed(animal.getSpeed());
 	}
 }

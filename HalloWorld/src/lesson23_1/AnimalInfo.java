@@ -11,22 +11,20 @@
 package lesson23_1;
 
 public class AnimalInfo{
-	private String animal ;
-	private double lenght;
-	private int speed;
-
-	public AnimalInfo (String animal,double lenght,int speed) {
-		this.animal = animal;
-		this.lenght = lenght;
-		this.speed = speed;
-	}
-
+	private String animal = "ライオン";
+	private double lenght = 2.1;
+	private int speed = 80;
+	
 	public String getAnimal() {
 		return animal;
 	}
 
 	public void setAnimal(String animal) {
+		if(animal == null) {
+			throw new IllegalArgumentException("名前を入力してください。");
+		}
 		this.animal = animal;
+		System.out.println("動物名：" + animal);
 	}
 
 	public double getLenght() {
@@ -35,6 +33,7 @@ public class AnimalInfo{
 
 	public void setLenght(double lenght) {
 		this.lenght = lenght;
+		System.out.println("体長：" + lenght + "m");
 	}
 
 	public int getSpeed() {
@@ -43,11 +42,12 @@ public class AnimalInfo{
 
 	public void setSpeed(int speed) {
 		this.speed = speed;
-	}
-
-	public void print() {
-		System.out.println("動物名：" + animal);
-		System.out.println("体長：" + lenght + "m");
 		System.out.println("速度：" + speed + "km/h");
 	}
+
+//	public void print() {
+//		System.out.println("動物名：" + animal);
+//		System.out.println("体長：" + lenght + "m");
+//		System.out.println("速度：" + speed + "km/h");
+//	}
 }
