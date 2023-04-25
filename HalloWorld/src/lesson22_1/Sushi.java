@@ -28,13 +28,10 @@ public class Sushi {
 	// メゾット作成
 
 	// 代入
-	//  
 	public Sushi(String food, String country,String genre) {
 		this.food = food;
 		this.country = country;
 		this.genre = genre;
-		//	System.out.println("この"+food+"はうまい");
-		//	System.out.println(+"は和食です");
 	}
 	
 	public void print() {
