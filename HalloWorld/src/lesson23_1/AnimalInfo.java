@@ -12,24 +12,19 @@ package lesson23_1;
 
 public class AnimalInfo{
 	// フィールド変数宣言
-	private String animal;
+	private String name;
 	private double lenght;
 	private int speed;
 
 	// getAnimalメゾット getter setter
-	public String getAnimal() {
+	public String getName() {
 		// フィールド変数に返す
-		return animal;
+		return name;
 	}
 
-	public void setAnimal(String animal) {
-		// nullチェック
-		if(animal == null) {
-			throw new IllegalArgumentException("名前を入力してください。");
-		}
+	public void setName(String name) {
 		// thisを使ってフィールド変数代入
-		this.animal = animal;
-		System.out.println("動物名：" + animal);
+		this.name = name;
 	}
 
 	// getLenghtメゾット getter setter
@@ -40,7 +35,6 @@ public class AnimalInfo{
 	public void setLenght(double lenght) {
 		// thisを使ってフィールド変数代入
 		this.lenght = lenght;
-		System.out.println("体長：" + lenght + "m");
 	}
 
 	// getSpeedメゾット getter setter
@@ -51,6 +45,6 @@ public class AnimalInfo{
 	public void setSpeed(int speed) {
 		// thisを使ってフィールド変数代入
 		this.speed = speed;
-		System.out.println("速度：" + speed + "km/h");
 	}
+	
 }
