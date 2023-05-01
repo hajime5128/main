@@ -8,36 +8,31 @@ public class Hero {
 	public Hero () {
 
 	}
-
+	HeroInfo hero =new HeroInfo();
 	// フィールド変数より値を取ってhp,mp,攻撃力、素早さ、防御力
 	// setterメゾット使用し、各ステータスにランダム値代入
 	// printメゾットに値を返す処理
 	public int hp () {
-		HeroInfo hero =new HeroInfo();
 		hero.setHp(random());
 		return hero.getHp();
 	}
 
 	public int mp () {
-		HeroInfo hero =new HeroInfo();
 		hero.setMp(random());
 		return hero.getMp();
 	}
 
 	public int attak () {
-		HeroInfo hero =new HeroInfo();
 		hero.setAttak(random());
 		return hero.getAttak();
 	}
 
 	public int speed () {
-		HeroInfo hero =new HeroInfo();
 		hero.setSpeed(random());
 		return hero.getSpeed();
 	}
 
 	public int defense () {
-		HeroInfo hero =new HeroInfo();
 		hero.setDefense(random());
 		return hero.getDefense();
 	}
