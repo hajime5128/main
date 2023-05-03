@@ -58,30 +58,35 @@ package lesson27_process;
 import java.util.Scanner;
 
 public class Lesson27_process {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // コンソールの文字列を受け取る
-        System.out.print("コンソールに文字を入力してください: ");
-        String input = scanner.nextLine();
+    public void amimal() {
+        try (Scanner scanner = new Scanner(System.in)) {
+			// コンソールの文字列を受け取る
+			System.out.print("コンソールに文字を入力してください: ");
+			String input = scanner.nextLine();
 
-        // 動物情報をカンマで分割し、各動物の情報、名前、体長、速度
-        // を一塊として受けとりanimal配列で受ける
-        String[] animals = input.split(",");
-        for (String animal : animals) {
-            // 動物名、体長、速度をコロンで分割する
-        	// info配列で、0　名前、１　体長、2　速度に格納する
-            String[] info = animal.split(":");
-            String name = info[0];
-            // 文字列をdoubleにする
-            double length = Double.parseDouble(info[1]);
-            // 文字列をintにする
-            int speed = Integer.parseInt(info[2]);
-            // getScientificNameメゾットより学名取得
-            String scientificName = getScientificName(name);
+			// 動物情報をカンマで分割し、各動物の情報、名前、体長、速度
+			// を一塊として受けとりanimal配列で受ける
+			String[] animals = input.split(",");
+			for (String animal : animals) {
+			    // 動物名、体長、速度をコロンで分割する
+				// info配列で、0　名前、１　体長、2　速度に格納する
+			    String[] info = animal.split(":");
+			    String name = info[0];
+			    // 文字列をdoubleにする
+			    double length = Double.parseDouble(info[1]);
+			    // 文字列をintにする
+			    int speed = Integer.parseInt(info[2]);
+			    // getScientificNameメゾットより学名取得
+			    String scientificName = getScientificName(name);
 
-            // 動物情報を出力する
-            printAnimalInfo(name, length, speed, scientificName);
-        }
+			    // 動物情報を出力する
+			    // メゾット起動
+			    printAnimalInfo(name, length, speed, scientificName);
+			}
+		} catch (NumberFormatException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
     }
 
     // 学名を取得するメソッド
@@ -98,6 +103,7 @@ public class Lesson27_process {
                 return "パン・トゥログロディテス";
             case "シマウマ":
                 return "チャップマンシマウマ";
+            // 該当以外は不明
             default:
                 return "不明";
         }
@@ -105,7 +111,7 @@ public class Lesson27_process {
 
     // 動物情報を出力するメソッド
     private static void printAnimalInfo(String name, double length, int speed, String scientificName) {
-        // 動物情報を出力する
+        // 動物情報を出力表示する
         System.out.println("動物名：" + name);
         System.out.println("体長：" +  length+ "m");
         System.out.println("速度：" + speed + "km/h");
