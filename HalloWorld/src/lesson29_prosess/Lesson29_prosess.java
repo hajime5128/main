@@ -1,8 +1,6 @@
 package lesson29_prosess;
 
 import java.util.Arrays;
-import java.util.Scanner;
-
 
 // コンソールで撮ってきた文字を受け取る
 // ,で分けString配列に格納
@@ -19,17 +17,36 @@ public class Lesson29_prosess {
 	// 昇順に並び替える
 	// prefectureInfoの配列情報の番号該当の情報のみ
 	// 配列より取ってくる
+	String[] imputNum;
 	public String[] scan() {
-		try (Scanner scanner = new Scanner(System.in)) {
 			// コンソールの文字列を受け取る
 			System.out.print("コンソールに文字を入力してください: ");
-			String input = scanner.nextLine();
+			@SuppressWarnings("resource")
+			String input = new java.util.Scanner(System.in).nextLine();
 			// コンソール出力内容を分け、String配列に格納
-			String[] imputNum = input.split(",");
-			return imputNum;
+			this.imputNum = input.split(",");
 		}
-	}
+	
 
+	// 入力内判定
+	// 昇順・降順
+	
+	public void sortScan() {
+		// コンソール入力内容を取得し、nameに代入
+			System.out.println("昇順のもしくは降順と入力");
+			@SuppressWarnings("resource")
+			String sort = new java.util.Scanner(System.in).nextLine();
+			System.out.println(sort);
+			if(sort == "昇順") {
+				int[] up = upSort(this.imputNum);
+				String[] prefectureInfo = prefectureInfo();
+				spritInfo(up,prefectureInfo);
+			}else {
+				int[] down = downSort(this.imputNum);
+				String[] prefectureInfo = prefectureInfo();
+				spritInfo(down,prefectureInfo);
+			}
+		}
 	
 	
 	// コンソール入力内容を引数で受け取る
@@ -59,10 +76,8 @@ public class Lesson29_prosess {
 		return dwonArrey;
 	}
 
-
-
 	public String[] prefectureInfo () {
-		//　都道府県の情報受け取る
+		// 都道府県の情報受け取る
 		String[] prefectureInfo = {
 				"北海道:札幌市:83424",
 				"青森県:青森市:9646",
@@ -104,7 +119,6 @@ public class Lesson29_prosess {
 		System.out.println("県庁所在地:" + cityName);
 		System.out.println("面積:" + km +"km2");
 		System.out.println();
-
 	}
-
+	
 }

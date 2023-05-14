@@ -40,10 +40,8 @@ import lesson29_prosess.Lesson29_prosess;
 public class Lesoon29_main {
 	public static void main (String[] args) {
 		Lesson29_prosess prefecture = new Lesson29_prosess();
-		String[] str = prefecture.scan();
-		int[] i = prefecture.downSort(str);
-		String[] prefectureInfo = prefecture.prefectureInfo();
-		prefecture.spritInfo(i,prefectureInfo);
+		prefecture.scan();
+		prefecture.sortScan();
 	}
 }
  
