@@ -18,7 +18,7 @@ public class Lesson29_prosess {
 	// prefectureInfoの配列情報の番号該当の情報のみ
 	// 配列より取ってくる
 	String[] imputNum;
-	public String[] scan() {
+	public void scan() {
 			// コンソールの文字列を受け取る
 			System.out.print("コンソールに文字を入力してください: ");
 			@SuppressWarnings("resource")
@@ -37,7 +37,7 @@ public class Lesson29_prosess {
 			@SuppressWarnings("resource")
 			String sort = new java.util.Scanner(System.in).nextLine();
 			System.out.println(sort);
-			if(sort == "昇順") {
+			if("昇順".equals(sort)) {
 				int[] up = upSort(this.imputNum);
 				String[] prefectureInfo = prefectureInfo();
 				spritInfo(up,prefectureInfo);
