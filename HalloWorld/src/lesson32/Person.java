@@ -6,7 +6,7 @@ class Person{
 	int age;
 	double height;
 	double weight;
-	static int counter;
+	static int count;
 	
 	// コンストラクタを定義しインスタンスフィールドに値をセット
 	Person(String name,int age, double height,double weight){
@@ -14,7 +14,7 @@ class Person{
 		this.age = age;
 		this.height = height;
 		this.weight  = weight;
-		counter++;
+		count++;
 	}
 	
 	// bmiを求めるメゾット
@@ -32,6 +32,6 @@ class Person{
 	}
 	
 	void printCount() {
-		System.out.println("合計" + counter + "人です");
+		System.out.println("合計" + count + "人です");
 	}
 }

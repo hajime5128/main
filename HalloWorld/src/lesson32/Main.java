@@ -11,5 +11,3 @@ class Main {
 		person1.printCount();
 	}
 }
-
-
