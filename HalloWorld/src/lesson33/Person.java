@@ -1,6 +1,7 @@
 package lesson33;
 
 class Person{
+	// staticつけることによりmainメゾットより書き換えられない
 	public static int count = 0;
 	public String firstName;
 	// lastNameを追加
@@ -18,20 +19,18 @@ class Person{
 		this.height = height;
 		this.weight = weight;
 	}
-
+	
+	// フルネーム表示メゾット
 	public String fullName(){
 		return this.firstName + this.lastName;
 	}
-
+	
+	// 自己紹介メゾット
 	public void print(){
 		System.out.println("名前は" + this.fullName() + "です");
 		System.out.println("年は" + this.age + "です");
 	}
-
-	public double bmi(){
-		return this.weight / this.height / this.height;
-	}
-
+	// 人数カウントメゾット
 	public static void printCount(){
 		System.out.println("合計" + Person.count + "人です");
 	}
